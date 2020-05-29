@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+      <meta charset='UTF-8'/>
+	<title>Thumbnail Generator | Difinmedia</title>
+      <meta content='height=device-height, initial-scale=1.0' name='viewport'/>
+      <link href='style.css' rel='stylesheet' type='text/css'/>
+           <title>Title of Blog</title>
+                  <b:skin><![CDATA[
+                  
+                  /* vietnamese */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58m-wi40.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58i-wi40.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58m-wi40.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58i-wi40.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58a-wg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#category, #bg-color, #bg-styles {
+	width: calc(99.5%/2);
+    color: #fff;
+    background-color: #ff0000;
+}
+#input input {
+	width: 99.2%;
+	height: 25px;
+}
+#input input, #input select {
+	margin: 1px 0;
+	height: 25px;
+	line-height: 25px;
+	font-family: inherit;
+}
+#input {
+	max-width: 900px;
+	width: 100%;
+}
+.background {
+	width: 900px;
+	height: 472.5px;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	opacity: 1;
+	visibility: visible;
+	user-select: none;
+}
+html {
+	opacity: 1
+}
+body {
+	display: table;
+	margin: 0 auto;
+	font-family: Quicksand, 'Google Sans', 'Segoe UI', sans-serif;
+}
+footer.footer {
+	margin: 50px auto;
+	text-align: center;
+	user-select: none;
+}
+footer.footer a {
+	font-weight: bold;
+}
+#content-container{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -999;
+}
+#content-container::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -999;
+	opacity: .10
+}
+.btnnn {
+	text-align: center;
+	margin: 20px 0;
+	user-select: none;
+	cursor: pointer;
+}
+#previewImage {
+    position: relative;
+    display: block;
+}
+#content-container.sty1::after {
+	background: url(images/1.png);
+}
+#content-container.sty2::after {
+	background: url(images/2.png);
+}
+#content-container.sty3::after {
+	background: url(images/3.png);
+}
+#content-container.sty4::after {
+	background: url(images/4.png);
+}
+#content-container.sty5::after {
+	background: url(images/5.png);
+}
+#content-container.sty6::after {
+	background: url(images/6.png);
+}
+#content-container.sty7::after {
+	background: url(images/7.png);
+}
+#content-container.sty8::after {
+	background: url(images/8.png);
+}
+#content-container.sty9::after {
+	background: url(images/9.png);
+}
+#content-container.sty10::after {
+	background: url(images/10.png);
+}
+#content-container.sty11::after {
+	background: url(images/11.png);
+}
+#content-container.sty12::after {
+	background: url(images/12.png);
+}
+#content-container.sty13::after {
+	background: url(images/13.png);
+}
+
+.img-logo img {
+	width: 45px;
+	height: 45px;
+	margin-left: 15px;
+}
+.elc {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.content-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 50px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	max-height: 375px;
+	color: #fff !important;
+	opacity: 1 !important;
+}
+.content-title {
+	font-size: 50px;
+	font-family: Quicksand, 'Google Sans', 'Segoe UI', sans-serif;
+	font-weight: 700;
+	padding: 0 150px;
+	text-shadow: 4px 2px 5px rgba(0,0,0,0.2);
+	max-height: 240px;
+	overflow: hidden;
+	z-index: 999;
+	opacity: 1;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+.content-container .header-container {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+.footer-container, .header-container {
+	padding-top: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	font-family: Quicksand, 'Google Sans', 'Segoe UI', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-shadow: 4px 2px 5px rgba(0,0,0,0.2);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	z-index: 999;
+}
+.header-container {
+	padding-top: 0;
+	padding-bottom: 25px;
+	-webkit-box-pack: left;
+	-ms-flex-pack: left;
+	justify-content: left;
+}
+#categories {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+.blocks {
+	width: 60px;
+	height: 10px;
+	display: inline-block;
+	background: #fff;
+	margin-right: 15px;
+}
+.separate {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+                  
+                  ]]></b:skin>
+	</head>
+    <body>
+
+    <b:section class='kontol' id='kontol'>
+      <b:widget id='HTML1' locked='false' title='' type='HTML'>
+        <b:widget-settings>
+          <b:widget-setting name='content'>&lt;div id=&quot;input&quot;&gt;
+		&lt;select id=&#39;bg-color&#39;&gt;
+			&lt;option disabled selected /&gt;Select Background
+			&lt;option /&gt;Red
+			&lt;option /&gt;Pink
+			&lt;option /&gt;Purple
+			&lt;option /&gt;Deep Purple
+			&lt;option /&gt;Indigo
+			&lt;option /&gt;Blue
+			&lt;option /&gt;Light Blue
+			&lt;option /&gt;Cyan
+			&lt;option /&gt;Teal
+			&lt;option /&gt;Green
+			&lt;option /&gt;Light Green
+			&lt;option /&gt;Lime
+			&lt;option /&gt;Yellow
+			&lt;option /&gt;Amber
+			&lt;option /&gt;Orange
+			&lt;option /&gt;Deep Orange
+			&lt;option /&gt;Brown
+			&lt;option /&gt;Grey
+			&lt;option /&gt;Blue Grey
+		&lt;/select&gt;
+		&lt;select id=&#39;bg-styles&#39;&gt;
+			&lt;option disabled selected /&gt;Select Pattern
+			&lt;option value=&quot;sty1&quot; /&gt;Background 1
+			&lt;option value=&quot;sty2&quot; /&gt;Background 2
+			&lt;option value=&quot;sty3&quot; /&gt;Background 3
+			&lt;option value=&quot;sty4&quot; /&gt;Background 4
+			&lt;option value=&quot;sty5&quot; /&gt;Background 5
+			&lt;option value=&quot;sty6&quot; /&gt;Background 6
+			&lt;option value=&quot;sty7&quot; /&gt;Background 7
+			&lt;option value=&quot;sty8&quot; /&gt;Background 8
+			&lt;option value=&quot;sty9&quot; /&gt;Background 9
+			&lt;option value=&quot;sty10&quot; /&gt;Background 10
+			&lt;option value=&quot;sty11&quot; /&gt;Background 11
+			&lt;option value=&quot;sty12&quot; /&gt;Background 12
+			&lt;option value=&quot;sty13&quot; /&gt;Background 13
+		&lt;/select&gt;
+		&lt;input type=&quot;text&quot; id=&quot;label1&quot; placeholder=&quot;Post Label&quot; /&gt;
+		&lt;br/&gt;
+		&lt;input type=&quot;text&quot; id=&quot;title1&quot; placeholder=&quot;Post Title&quot; /&gt;
+		&lt;br/&gt;
+		&lt;input type=&quot;text&quot; id=&quot;author&quot; placeholder=&quot;Author Name&quot; /&gt;
+		&lt;br/&gt; 
+		&lt;input type=&quot;text&quot; id=&quot;btitle1&quot; placeholder=&quot;Blog Title&quot; /&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class=&quot;background&quot; id=&quot;background&quot;&gt;
+		&lt;div class=&quot;content-container&quot; &gt;
+			&lt;div class=&quot;header-container&quot;&gt;
+				&lt;div class=&quot;blocks&quot; id=&quot;blocks&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;author-name&quot; id=&quot;categories&quot;&gt;Post Label&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;separate&quot;&gt;
+				&lt;div id=&quot;content-title1&quot; class=&quot;content-title&quot;&gt;Post Title&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;footer-container&quot;&gt;
+				&lt;div class=&quot;author-name&quot; id=&quot;author-name&quot;&gt;@Author Name&lt;/div&gt;
+				&lt;div class=&quot;elc&quot; id=&quot;elc&quot;&gt;
+					Dian Arifin
+					&lt;div class=&quot;img-logo&quot; style=&quot;display: none;&quot;&gt;
+						&lt;img src=&quot;./images/logo.png&quot; /&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#39;content-container&#39;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;btnnn&quot;&gt;	
+		&lt;div id=&quot;btn-Preview-Image&quot;&gt;
+			Preview Image
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+
+	&lt;div id=&quot;previewImage&quot;&gt;&lt;/div&gt; 
+
+
+	&lt;div style=&quot;font-size: 12px&quot;&gt;* Click the preview image button, right click on the image &gt; Save Image As... to save Image&lt;/div&gt;</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+      </b:widget>
+    </b:section>
+           
+
+	
+	<footer class='footer'>
+		Thumbnail Generator by Dian Arifin - <a alt='dian arifin' href='https://www.difinmedia.com/' target='_blank'>Dian Cok</a>
+	</footer>
+<script src='https://cdn.statically.io/gh/Aslori/file/58bbd356/jquery-3.5.0.min.js' type='text/javascript'/>
+<script src='https://cdn.statically.io/gh/Aslori/file/d08d301b/html2canvas.min.js' type='text/javascript'/>
+<script>
+		$(document).ready(function() { 
+			// Global variable 
+			var element = $(&quot;.content-container&quot;);
+			var getCanvas;  
+
+			$(&quot;#btn-Preview-Image&quot;).on(&#39;click&#39;, function() { 
+				html2canvas(element, { 
+					onrendered: function(canvas) { 
+						$(&quot;#previewImage&quot;).html(canvas); 
+						getCanvas = canvas;						
+					}
+				}); 				
+			}); 
+
+			// Begin Here
+			var input = document.getElementById(&quot;input&quot;), judul1 = document.getElementById(&quot;title1&quot;), author = document.getElementById(&quot;author&quot;), category = document.getElementById(&quot;category&quot;), bgcl = document.getElementById(&quot;bg-color&quot;), backgroundSty = document.getElementById(&quot;bg-styles&quot;), categories = document.getElementById(&quot;categories&quot;);
+
+			// Keyup
+			input.onkeyup = function() {
+				document.getElementById(&quot;categories&quot;).innerHTML = label1.value;
+				document.getElementById(&quot;content-title1&quot;).innerHTML = judul1.value;
+				document.getElementById(&quot;elc&quot;).innerHTML = btitle1.value;
+				document.getElementById(&quot;author-name&quot;).innerHTML = &quot;@&quot; + author.value;
+			};
+
+			
+
+			document.getElementById(&quot;bg-color&quot;).addEventListener(&quot;change&quot;, function() {
+				var a = &quot;#d32f2f #c2185b #7b1fa2 #512da8 #303f9f #1976d2 #0288d1 #0097a7 #00796b #388e3c #689f38 #afb42b #fbc02d #ffa000 #f57c00 #e64a19 #5d4037 #616161 #455a64&quot;.split(&quot; &quot;)[bgcl.selectedIndex];
+				document.getElementById(&quot;content-container&quot;).style.backgroundColor = a;
+			});
+
+			$(&quot;#bg-styles&quot;).data(&quot;oldVal&quot;, $(&quot;#bg-styles&quot;).val());
+			$(&quot;#bg-styles&quot;).change(function() {
+				var a = $(this), b = a.val(), c = a.data(&quot;oldVal&quot;);
+				a.data(&quot;oldVal&quot;, b);
+				$(&quot;#content-container&quot;).removeClass(c).addClass(b);
+			});
+		}); 
+
+		// Select
+		function check(a) {
+			document.getElementById(&quot;categories&quot;).innerHTML = category.options[category.selectedIndex].value;
+		}
+	</script>
+    </body>
+</html>
