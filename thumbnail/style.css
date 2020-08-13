@@ -68,12 +68,12 @@
 	font-family: inherit;
 }
 #input {
-	max-width: 900px;
+	max-width: 800px;
 	width: 100%;
 }
 .background {
-	width: 900px;
-	height: 472.5px;
+	width: 800px;
+	height: 475px;
 	color: #fff;
 	overflow: hidden;
 	position: relative;
